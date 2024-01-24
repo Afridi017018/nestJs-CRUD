@@ -23,7 +23,7 @@ export class UserController{
     }
 
     @Post("/add")
-    addUser(@Body() user: User ) : { message: string, status: string, user: User }{
+    addUser(@Body() user: User ) : Promise<{ message: string, status: string, user: User }>{
         return this.userService.addUserService(user)
     }
 

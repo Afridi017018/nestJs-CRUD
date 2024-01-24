@@ -8,9 +8,9 @@ export class UserService {
 
     public users: User[] = [];
 
-    addUserService(user: User): { message: string, status: string, user: User } {
+    async addUserService(user: User): Promise<{ message: string, status: string, user: User }> {
 
-        user.id = uuidv4();
+        user.id = await uuidv4();
 
         this.users.push(user);
 
