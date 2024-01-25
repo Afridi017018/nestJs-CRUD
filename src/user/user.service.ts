@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { User } from './user.dto';
+import { User } from './data/user.dto';
 import { v4 as uuidv4 } from 'uuid';
 
 
